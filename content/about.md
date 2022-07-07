@@ -6,7 +6,8 @@ title: About
 
 This is a private blog from a fundamental R enthusiasts/user.
 
-**Thank you to those who have helped me.**
+**Thank you to those who have helped me.**  
+
 **Thank you for the pleasant, and not so pleasant experiences of the past.**
 
 **感谢有你在**
