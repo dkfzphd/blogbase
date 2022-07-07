@@ -13,6 +13,7 @@ This is a private blog from a fundamental R enthusiasts/user.
 **感谢有你在**
 
 ![](/./about_files/emailQR.png)
+
 Thank you list(not limited to the list):
 - Open Source
 - [Yihui Xie](https://yihui.org/en/about/).
