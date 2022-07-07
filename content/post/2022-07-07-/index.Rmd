@@ -15,3 +15,4 @@ tags:
 因为这所有的发生的人事物塑造了今天的我。
 
 **感谢**
+{{ template "_internal/disqus.html" . }}
