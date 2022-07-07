@@ -4,7 +4,7 @@ title: About
 ---
 
 
-This is a private blog from a fundamental R enthusiasts/user.
+This is a private blog from a beginner-level R enthusiasts/user.
 
 1. Reproducible research with realistic implications is more meaningful than flashy papers. 
 1. Don't abuse p-value, p<0.05 is not a life-saver.
