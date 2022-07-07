@@ -8,3 +8,9 @@ categories:
 tags: []
 ---
 Hello World
+```{r}
+x <- -18:10
+y <- x^2
+plot(x,y)
+```
+
