@@ -3,4 +3,18 @@ date: "2016-05-05T21:48:51-07:00"
 title: About
 ---
 
-This is a "hello world" example website for the [**blogdown**](https://github.com/rstudio/blogdown) package. The theme was forked from [@jrutheiser/hugo-lithium-theme](https://github.com/jrutheiser/hugo-lithium-theme) and modified by [Yihui Xie](https://github.com/yihui/hugo-lithium).
+---
+title: "About"
+date: "2016-05-05T21:48:51-07:00"
+---
+
+This is a private blog from a fundamental R enthusiasts/user.
+
+**Thank you to those who have helped me. Thank you for the pleasant, and not so pleasant, experiences of the past.**
+
+**感谢有你在**
+
+
+Thank you list(not limited to the list):
+- Open Source
+- [Yihui Xie](https://github.com/yihui/hugo-lithium).
