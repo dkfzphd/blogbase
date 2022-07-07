@@ -1,0 +1,17 @@
+---
+title: Test
+author: Guo Te
+date: '2022-07-07'
+slug: test
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+```{r}
+x <- -18:10
+y <- x^2
+plot(x,y)
+```
+
