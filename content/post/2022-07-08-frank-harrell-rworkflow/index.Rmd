@@ -28,7 +28,7 @@ Joseph Rickert在此对[R Workflow](https://hbiostat.org/rflow/)进行了审阅�
 下图是对研究过程的一个过于简化的总结
 ![](images/r-workdflow3.png)
 
-在这个过程中，R和Quarto在几个点上发挥了关键作用
+在这个过程中，R和Quarto在几个点上发挥了关键作用。
 
 ## 3 R工作流程
 
