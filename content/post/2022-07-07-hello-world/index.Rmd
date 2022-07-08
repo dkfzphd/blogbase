@@ -10,6 +10,6 @@ Hello World
 ```{r}
 x <- -18:10
 y <- x^2
-plot(x,y, type = "b",col = "red",pch=19)
+plot(x,y, type = "b",col = "red", pch = 19)
 ```
 
