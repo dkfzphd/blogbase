@@ -23,6 +23,11 @@ tags:
 <blockquote>
 <p>个人感觉：非常混乱的语言模式，但是又没有什么好的选择</p>
 </blockquote>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph flowchat{\n\n  # several \"node\" statements\n  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]\n  Vector; Insert\n  # set other \"node\"s statements\n  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]\n  \n  # several \"edge\" statements\n  edge[color=blue,style=filled]\n  \n  Vector->Linearized\n  Linearized->Seamless_Cloning\n  Vector->\"Non-linearized\"->Digestion->Purification->Linearized->Ligation\n  Insert->Sticky_end->Ligation\n  Insert->Blunt_end->Seamless_Cloning->New_Plasmid\n  Ligation->New_Plasmid\n  \n  New_Plasmid[fillcolor=red,style=filled,color=red] \n  # must add style=filled otherwise does not work with fillcolor\n  \n   \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="code-part" class="section level3">
+<h3>Code part</h3>
 <pre class="r"><code>library(DiagrammeR)
 
 grViz(&quot;
@@ -49,7 +54,7 @@ digraph flowchat{
   
    
 }&quot;)</code></pre>
-<div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph flowchat{\n\n  # several \"node\" statements\n  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]\n  Vector; Insert\n  # set other \"node\"s statements\n  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]\n  \n  # several \"edge\" statements\n  edge[color=blue,style=filled]\n  \n  Vector->Linearized\n  Linearized->Seamless_Cloning\n  Vector->\"Non-linearized\"->Digestion->Purification->Linearized->Ligation\n  Insert->Sticky_end->Ligation\n  Insert->Blunt_end->Seamless_Cloning->New_Plasmid\n  Ligation->New_Plasmid\n  \n  New_Plasmid[fillcolor=red,style=filled,color=red] \n  # must add style=filled otherwise does not work with fillcolor\n  \n   \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"diagram":"\ndigraph flowchat{\n\n  # several \"node\" statements\n  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]\n  Vector; Insert\n  # set other \"node\"s statements\n  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]\n  \n  # several \"edge\" statements\n  edge[color=blue,style=filled]\n  \n  Vector->Linearized\n  Linearized->Seamless_Cloning\n  Vector->\"Non-linearized\"->Digestion->Purification->Linearized->Ligation\n  Insert->Sticky_end->Ligation\n  Insert->Blunt_end->Seamless_Cloning->New_Plasmid\n  Ligation->New_Plasmid\n  \n  New_Plasmid[fillcolor=red,style=filled,color=red] \n  # must add style=filled otherwise does not work with fillcolor\n  \n   \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>

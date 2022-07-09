@@ -16,7 +16,7 @@ tags:
 
 > 个人感觉：非常混乱的语言模式，但是又没有什么好的选择
 
-```{r}
+```{r, echo=FALSE}
 library(DiagrammeR)
 
 grViz("
@@ -44,4 +44,32 @@ digraph flowchat{
    
 }")
 ```
+### Code part
+```{r, echo=TRUE}
+library(DiagrammeR)
 
+grViz("
+digraph flowchat{
+
+  # several 'node' statements
+  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]
+  Vector; Insert
+  # set other 'node's statements
+  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]
+  
+  # several 'edge' statements
+  edge[color=blue,style=filled]
+  
+  Vector->Linearized
+  Linearized->Seamless_Cloning
+  Vector->'Non-linearized'->Digestion->Purification->Linearized->Ligation
+  Insert->Sticky_end->Ligation
+  Insert->Blunt_end->Seamless_Cloning->New_Plasmid
+  Ligation->New_Plasmid
+  
+  New_Plasmid[fillcolor=red,style=filled,color=red] 
+  # must add style=filled otherwise does not work with fillcolor
+  
+   
+}")
+```
