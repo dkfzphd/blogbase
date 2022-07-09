@@ -20,6 +20,15 @@ tags:
 <div id="diagrammergrviz实践中的应用初试" class="section level3">
 <h3>DiagrammeR::grViz实践中的应用(初试)</h3>
 <p><strong>分子克隆的一般思路简图</strong></p>
+<p>说明</p>
+<ul>
+<li>无缝克隆要留有足够的同源序列</li>
+<li>平末端可以采用
+<ol style="list-style-type: decimal">
+<li>无缝克隆（保留足够长同源序列）</li>
+<li>T4 ligase克隆（Vector去磷酸化（防止自联结）, Insert磷酸化）</li>
+</ol></li>
+</ul>
 <blockquote>
 <p>个人感觉：非常混乱的语言模式，但是又没有什么好的选择</p>
 </blockquote>
@@ -46,7 +55,7 @@ digraph flowchat{
   Linearized-&gt;Seamless_Cloning
   Vector-&gt;&#39;Non-linearized&#39;-&gt;Digestion-&gt;Purification-&gt;Linearized-&gt;Ligation
   Insert-&gt;Sticky_end-&gt;Ligation
-  Insert-&gt;Blunt_end-&gt;Seamless_Cloning-&gt;New_Plasmid
+  Insert-&gt;Blunt_end -&gt; Seamless_Cloning-&gt;New_Plasmid
   Ligation-&gt;New_Plasmid
   
   New_Plasmid[fillcolor=red,style=filled,color=red] 

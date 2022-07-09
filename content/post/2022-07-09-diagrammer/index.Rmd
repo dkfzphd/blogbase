@@ -14,6 +14,13 @@ tags:
 ### DiagrammeR::grViz实践中的应用(初试)
 **分子克隆的一般思路简图**
 
+说明
+
+- 无缝克隆要留有足够的同源序列
+- 平末端可以采用  
+     1. 无缝克隆（保留足够长同源序列）
+     2. T4 ligase克隆（Vector去磷酸化（防止自联结）, Insert磷酸化）
+
 > 个人感觉：非常混乱的语言模式，但是又没有什么好的选择
 
 ```{r, echo=FALSE}
@@ -64,7 +71,7 @@ digraph flowchat{
   Linearized->Seamless_Cloning
   Vector->'Non-linearized'->Digestion->Purification->Linearized->Ligation
   Insert->Sticky_end->Ligation
-  Insert->Blunt_end->Seamless_Cloning->New_Plasmid
+  Insert->Blunt_end -> Seamless_Cloning->New_Plasmid
   Ligation->New_Plasmid
   
   New_Plasmid[fillcolor=red,style=filled,color=red] 
