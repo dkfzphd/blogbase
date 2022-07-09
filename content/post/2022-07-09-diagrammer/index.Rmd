@@ -45,7 +45,7 @@ digraph flowchat{
 }")
 ```
 ### Code part
-```{r, echo=TRUE}
+```{r, echo=TRUE, results='hide'}
 library(DiagrammeR)
 
 grViz("
