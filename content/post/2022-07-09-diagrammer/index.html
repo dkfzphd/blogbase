@@ -37,12 +37,12 @@ digraph flowchat{
   # several &#39;edge&#39; statements
   edge[color=blue,style=filled]
   
-  Vector-&gt;linearized-&gt;ligation
-  linearized-&gt;Seamless_Cloning
-  Vector-&gt;&#39;non-linearized&#39;-&gt;digestion-&gt;purification-&gt;ligation
-  Insert-&gt;Sticky_end-&gt;ligation
+  Vector-&gt;Linearized
+  Linearized-&gt;Seamless_Cloning
+  Vector-&gt;&#39;Non-linearized&#39;-&gt;Digestion-&gt;Purification-&gt;Linearized-&gt;Ligation
+  Insert-&gt;Sticky_end-&gt;Ligation
   Insert-&gt;Blunt_end-&gt;Seamless_Cloning-&gt;New_Plasmid
-  ligation-&gt;New_Plasmid
+  Ligation-&gt;New_Plasmid
   
   New_Plasmid[fillcolor=red,style=filled,color=red] 
   # must add style=filled otherwise does not work with fillcolor
@@ -50,6 +50,6 @@ digraph flowchat{
    
 }&quot;)</code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph flowchat{\n\n  # several \"node\" statements\n  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]\n  Vector; Insert\n  # set other \"node\"s statements\n  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]\n  \n  # several \"edge\" statements\n  edge[color=blue,style=filled]\n  \n  Vector->linearized->ligation\n  linearized->Seamless_Cloning\n  Vector->\"non-linearized\"->digestion->purification->ligation\n  Insert->Sticky_end->ligation\n  Insert->Blunt_end->Seamless_Cloning->New_Plasmid\n  ligation->New_Plasmid\n  \n  New_Plasmid[fillcolor=red,style=filled,color=red] \n  # must add style=filled otherwise does not work with fillcolor\n  \n   \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph flowchat{\n\n  # several \"node\" statements\n  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]\n  Vector; Insert\n  # set other \"node\"s statements\n  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]\n  \n  # several \"edge\" statements\n  edge[color=blue,style=filled]\n  \n  Vector->Linearized\n  Linearized->Seamless_Cloning\n  Vector->\"Non-linearized\"->Digestion->Purification->Linearized->Ligation\n  Insert->Sticky_end->Ligation\n  Insert->Blunt_end->Seamless_Cloning->New_Plasmid\n  Ligation->New_Plasmid\n  \n  New_Plasmid[fillcolor=red,style=filled,color=red] \n  # must add style=filled otherwise does not work with fillcolor\n  \n   \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>

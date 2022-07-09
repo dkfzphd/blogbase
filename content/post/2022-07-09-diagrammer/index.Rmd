@@ -31,12 +31,12 @@ digraph flowchat{
   # several 'edge' statements
   edge[color=blue,style=filled]
   
-  Vector->linearized->ligation
-  linearized->Seamless_Cloning
-  Vector->'non-linearized'->digestion->purification->ligation
-  Insert->Sticky_end->ligation
+  Vector->Linearized
+  Linearized->Seamless_Cloning
+  Vector->'Non-linearized'->Digestion->Purification->Linearized->Ligation
+  Insert->Sticky_end->Ligation
   Insert->Blunt_end->Seamless_Cloning->New_Plasmid
-  ligation->New_Plasmid
+  Ligation->New_Plasmid
   
   New_Plasmid[fillcolor=red,style=filled,color=red] 
   # must add style=filled otherwise does not work with fillcolor
