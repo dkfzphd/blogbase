@@ -32,6 +32,7 @@ digraph flowchat{
   edge[color=blue,style=filled]
   
   Vector->linearized->ligation
+  linearized->Seamless_Cloning
   Vector->'non-linearized'->digestion->purification->ligation
   Insert->Sticky_end->ligation
   Insert->Blunt_end->Seamless_Cloning->New_Plasmid
