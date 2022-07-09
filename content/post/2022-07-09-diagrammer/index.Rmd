@@ -1,0 +1,46 @@
+---
+title: 流程图在DiagrammeR实践中的应用
+author: Guo Te
+date: '2022-07-09'
+slug: diagrammer
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+## R中自动画流程图
+
+### DiagrammeR::grViz实践中的应用(初试)
+**分子克隆的一般思路简图**
+
+> 个人感觉：非常混乱的语言模式，但是又没有什么好的选择
+
+```{r}
+library(DiagrammeR)
+
+grViz("
+digraph flowchat{
+
+  # several 'node' statements
+  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]
+  Vector; Insert
+  # set other 'node's statements
+  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]
+  
+  # several 'edge' statements
+  edge[color=blue,style=filled]
+  
+  Vector->linearized->ligation
+  Vector->'non-linearized'->digestion->purification->ligation
+  Insert->Sticky_end->ligation
+  Insert->Blunt_end->Seamless_Cloning->New_Plasmid
+  ligation->New_Plasmid
+  
+  New_Plasmid[fillcolor=red,style=filled,color=red] 
+  # must add style=filled otherwise does not work with fillcolor
+  
+   
+}")
+```
+

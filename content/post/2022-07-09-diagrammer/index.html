@@ -1,0 +1,54 @@
+---
+title: 流程图在DiagrammeR实践中的应用
+author: Guo Te
+date: '2022-07-09'
+slug: diagrammer
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="{{< blogdown/postref >}}index_files/viz/viz.js"></script>
+<link href="{{< blogdown/postref >}}index_files/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/grViz-binding/grViz.js"></script>
+
+
+<div id="r中自动画流程图" class="section level2">
+<h2>R中自动画流程图</h2>
+<div id="diagrammergrviz实践中的应用初试" class="section level3">
+<h3>DiagrammeR::grViz实践中的应用(初试)</h3>
+<p><strong>分子克隆的一般思路简图</strong></p>
+<blockquote>
+<p>个人感觉：非常混乱的语言模式，但是又没有什么好的选择</p>
+</blockquote>
+<pre class="r"><code>library(DiagrammeR)
+
+grViz(&quot;
+digraph flowchat{
+
+  # several &#39;node&#39; statements
+  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]
+  Vector; Insert
+  # set other &#39;node&#39;s statements
+  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]
+  
+  # several &#39;edge&#39; statements
+  edge[color=blue,style=filled]
+  
+  Vector-&gt;linearized-&gt;ligation
+  Vector-&gt;&#39;non-linearized&#39;-&gt;digestion-&gt;purification-&gt;ligation
+  Insert-&gt;Sticky_end-&gt;ligation
+  Insert-&gt;Blunt_end-&gt;Seamless_Cloning-&gt;New_Plasmid
+  ligation-&gt;New_Plasmid
+  
+  New_Plasmid[fillcolor=red,style=filled,color=red] 
+  # must add style=filled otherwise does not work with fillcolor
+  
+   
+}&quot;)</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph flowchat{\n\n  # several \"node\" statements\n  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]\n  Vector; Insert\n  # set other \"node\"s statements\n  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]\n  \n  # several \"edge\" statements\n  edge[color=blue,style=filled]\n  \n  Vector->linearized->ligation\n  Vector->\"non-linearized\"->digestion->purification->ligation\n  Insert->Sticky_end->ligation\n  Insert->Blunt_end->Seamless_Cloning->New_Plasmid\n  ligation->New_Plasmid\n  \n  New_Plasmid[fillcolor=red,style=filled,color=red] \n  # must add style=filled otherwise does not work with fillcolor\n  \n   \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
