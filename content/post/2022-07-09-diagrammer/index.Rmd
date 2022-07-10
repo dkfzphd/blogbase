@@ -54,7 +54,7 @@ digraph flowchat{
   subgraph {
   rank = same; Linearized; Blunt_end; Sticky_end; }
    
-}")
+}",height = 800)
 ```
 ### Code part
 ```{r, echo=TRUE, results='hide'}
@@ -88,5 +88,5 @@ digraph flowchat{
   subgraph {
   rank = same; Linearized; Blunt_end; Sticky_end; }
    
-}")
+}",height = 800)
 ```

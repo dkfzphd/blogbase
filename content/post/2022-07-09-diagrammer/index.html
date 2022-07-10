@@ -32,7 +32,7 @@ editor_options:
 <blockquote>
 <p>个人感觉：非常混乱的语言模式，但是又没有什么好的选择</p>
 </blockquote>
-<div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<div id="htmlwidget-1" style="width:672px;height:800px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph flowchat{\n\n  # several \"node\" statements\n  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]\n  Vector; Insert\n  # set other \"node\"s statements\n  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]\n  \n  # several \"edge\" statements\n  edge[color=blue,style=filled,arrowhead=vee]\n  \n  Vector->Linearized\n  Linearized->Seamless_Cloning\n  Vector->\"Non-linearized\"->Digestion->Purification->Linearized->Ligation\n  Insert->Sticky_end->Ligation\n  Insert->Blunt_end -> Seamless_Cloning->New_Plasmid\n  Ligation->New_Plasmid\n  \n  New_Plasmid[fillcolor=red,style=filled,color=red] \n  # must add style=filled otherwise does not work with fillcolor\n  \n  subgraph {\n  rank = same; Vector; Insert; }\n  \n  subgraph {\n  rank = same; Linearized; Blunt_end; Sticky_end; }\n   \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="code-part" class="section level3">
@@ -67,6 +67,6 @@ digraph flowchat{
   subgraph {
   rank = same; Linearized; Blunt_end; Sticky_end; }
    
-}&quot;)</code></pre>
+}&quot;,height = 800)</code></pre>
 </div>
 </div>
