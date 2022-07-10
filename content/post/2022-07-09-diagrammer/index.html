@@ -43,13 +43,13 @@ grViz(&quot;
 digraph flowchat{
 
   # several &#39;node&#39; statements
-  node [shape = circle, fontname = Helvetica, fillcolor=yellow, style=filled]
+  node [shape = circle, fontname = Helvetica, fillcolor=&#39;#e9a3c9&#39;, color=&#39;#e9a3c9&#39;,style=filled]
   Vector; Insert
   # set other &#39;node&#39;s statements
-  node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]
+  node [shape = rect, fontname = Helvetica, color=&#39;#a1d76a&#39;, fillcolor=&#39;#a1d76a&#39;, style=filled]
   
   # several &#39;edge&#39; statements
-  edge[color=blue,style=filled,arrowhead=vee]
+  edge[color=&#39;#0a9396&#39;,style=filled,arrowhead=vee]
   
   Vector-&gt;Linearized
   Linearized-&gt;Seamless_Cloning
@@ -58,7 +58,7 @@ digraph flowchat{
   Insert-&gt;Blunt_end -&gt; Seamless_Cloning-&gt;New_Plasmid
   Ligation-&gt;New_Plasmid
   
-  New_Plasmid[fillcolor=red,style=filled,color=red] 
+  New_Plasmid[fillcolor=&#39;#ffcb77&#39;,style=filled,color=&#39;#ffcb77&#39;] 
   # must add style=filled otherwise does not work with fillcolor
   
   subgraph {
