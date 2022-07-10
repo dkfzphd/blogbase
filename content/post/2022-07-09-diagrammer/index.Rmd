@@ -36,7 +36,7 @@ digraph flowchat{
   node [shape = rect, fontname = Helvetica, color='#21BF73', fillcolor='#21BF73', style=filled]
   
   # several 'edge' statements
-  edge[color='#816797',style=filled,arrowhead=vee]
+  edge[color='black',style=filled,arrowhead=vee]
   
   Vector->Linearized
   Linearized->Seamless_Cloning
