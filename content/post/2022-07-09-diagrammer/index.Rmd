@@ -1,12 +1,12 @@
 ---
-title: DiagrammeR::grViz流程图在Molecular Cloning实践中的应用
-author: Guo Te
+title: "DiagrammeR::grViz流程图在Molecular Cloning实践中的应用"
+author: "Guo Te"
 date: '2022-07-09'
 slug: diagrammer
-categories:
-  - R
-tags:
-  - R Markdown
+categories: R
+tags: R Markdown
+editor_options:
+  chunk_output_type: console
 ---
 
 ## R中自动画流程图
@@ -36,18 +36,23 @@ digraph flowchat{
   node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]
   
   # several 'edge' statements
-  edge[color=blue,style=filled]
+  edge[color=blue,style=filled,arrowhead=vee]
   
   Vector->Linearized
   Linearized->Seamless_Cloning
   Vector->'Non-linearized'->Digestion->Purification->Linearized->Ligation
   Insert->Sticky_end->Ligation
-  Insert->Blunt_end->Seamless_Cloning->New_Plasmid
+  Insert->Blunt_end -> Seamless_Cloning->New_Plasmid
   Ligation->New_Plasmid
   
   New_Plasmid[fillcolor=red,style=filled,color=red] 
   # must add style=filled otherwise does not work with fillcolor
   
+  subgraph {
+  rank = same; Vector; Insert; }
+  
+  subgraph {
+  rank = same; Linearized; Blunt_end; Sticky_end; }
    
 }")
 ```
@@ -65,7 +70,7 @@ digraph flowchat{
   node [shape = rect, fontname = Helvetica, color=green, fillcolor=green, style=filled]
   
   # several 'edge' statements
-  edge[color=blue,style=filled]
+  edge[color=blue,style=filled,arrowhead=vee]
   
   Vector->Linearized
   Linearized->Seamless_Cloning
@@ -77,6 +82,11 @@ digraph flowchat{
   New_Plasmid[fillcolor=red,style=filled,color=red] 
   # must add style=filled otherwise does not work with fillcolor
   
+  subgraph {
+  rank = same; Vector; Insert; }
+  
+  subgraph {
+  rank = same; Linearized; Blunt_end; Sticky_end; }
    
 }")
 ```
