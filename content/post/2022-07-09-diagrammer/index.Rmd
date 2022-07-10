@@ -45,7 +45,7 @@ digraph flowchat{
   Insert->Blunt_end -> Seamless_Cloning->New_Plasmid
   Ligation->New_Plasmid
   
-  New_Plasmid[fillcolor='#ffffbf',style=filled,color='#ffffbf'] 
+  New_Plasmid[fillcolor='#ffcb77',style=filled,color='#ffcb77'] 
   # must add style=filled otherwise does not work with fillcolor
   
   subgraph {
