@@ -72,7 +72,7 @@ digraph flowchat{
   # several 'edge' statements
   edge[color='#0a9396',style=filled,arrowhead=vee]
   
-  Vector->Linearized
+  Vector-> 'PCR or Synthesis'->Linearized
   Linearized->Seamless_Cloning
   Vector->'Non-linearized'->Digestion->Purification->Linearized->Ligation
   Insert->Sticky_end->Ligation
