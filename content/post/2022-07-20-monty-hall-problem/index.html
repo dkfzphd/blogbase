@@ -1,0 +1,34 @@
+---
+title: Monty Hall problem
+author: Guo Te
+date: '2022-07-20'
+slug: monty-hall-problem
+categories:
+  - R
+tags:
+  - R Markdown
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="{{< blogdown/postref >}}index_files/viz/viz.js"></script>
+<link href="{{< blogdown/postref >}}index_files/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/grViz-binding/grViz.js"></script>
+
+
+<div id="三门问题路径分析" class="section level3">
+<h3>三门问题路径分析</h3>
+<p>三门背后对应内容：1个Car, 2只羊（Goat1 , Goat2）</p>
+<p>三门问题一直以来困扰很多人，我们先看下面的路线图</p>
+<div id="htmlwidget-1" style="width:672px;height:400px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph flowchart{\nrankdir=LR; \n\nnode[fontname=\"Arial Black\", fillcolor=\"#9DD6DF\", color=\"#FF0063\", style=filled, shape=oval]\nparticipant;car_door;goat_door; goat;\n\nnode[fontname=\"Arial Black\", fillcolor=\"white\", color=\"#EB1D36\", style=filled, shape=oval]\ncar;\n\nedge[fontname=arial, color=blue, style=filled, arrowhead=vee]\n\nparticipant -> car_door [label=\"1/3\", fontsize=10]\ncar_door -> goat [label=\"switch\", fontsize=10, color=\"red\"]\ncar_door -> car  [label=\"keep\", fontsize=10, color=\"green\"]\nparticipant -> goat_door [label=\"2/3\", fontsize=10]\ngoat_door -> car [label=\"switch\", fontsize=10, color=\"red\"]\ngoat_door -> goat  [label=\"keep\", fontsize=10,color=\"green\"]\n\n\n#subgraph{rank=same; D;B}\n#subgraph{rank=same; C}\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="如果我们只关心能不能得到汽车" class="section level3">
+<h3>如果我们只关心能不能得到汽车。</h3>
+<ol style="list-style-type: decimal">
+<li>从car 节点上看，keep策略1/3 * 1， switch策略2/3 * 1 .<br />
+</li>
+<li>从goat节点上看，keep策略2/3 * 1， switch策略1/3 * 1 .</li>
+</ol>
+</div>
