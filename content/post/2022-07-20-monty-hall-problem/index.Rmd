@@ -112,3 +112,38 @@ goat_door -> goat  [label='keep', fontsize=10,color='green']
 }",
 height = 400)
 ```
+
+
+### 三门问题的拓展版
+有三张纸牌：
+
+纸牌1： 2面都是黑色          card1: black-black 
+纸牌2： 2面都是白色          card2: white-white
+纸牌3： 1面是白色，1面是黑色 card3: black-white 
+
+问题：当你随机抽取一张牌看到的是黑色，请问背面是白色的概率。答案是1/3.
+
+```{r}
+library(DiagrammeR)
+grViz("
+digraph flowchart{
+rankdir=LR; 
+
+node[fontname='Arial Black', fillcolor='#9DD6DF', color='#FF0063', style=filled, shape=oval]
+black;card1;card2;card3;
+
+edge[fontname=arial, color=blue, style=filled, arrowhead=vee]
+
+black -> card1 [label='2/3', fontsize=8]
+black -> card3 [label='1/3', fontsize=8]
+black -> card2 [label='0', fontsize=8]
+card1 -> 'black-at-back' [label='1', fontsize=8]
+
+card3 -> 'white-at-back' [label='1', fontsize=8]
+
+#subgraph{rank=same; D;B}
+#subgraph{rank=same; C}
+
+}",
+height = 400)
+```
