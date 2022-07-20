@@ -149,3 +149,5 @@ card3 -> 'white-at-back' [label='1', fontsize=8]
 }",
 height = 400)
 ```
+
+**当问题不清晰时就用路径分析，反直觉的点就会迎刃而解。**
