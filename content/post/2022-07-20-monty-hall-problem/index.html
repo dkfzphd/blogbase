@@ -45,28 +45,6 @@ editor_options:
 纸牌2： 2面都是白色 card2: white-white
 纸牌3： 1面是白色，1面是黑色 card3: black-white</p>
 <p>问题：当你随机抽取一张牌看到的是黑色，请问背面是白色的概率。答案是1/3.</p>
-<pre class="r"><code>library(DiagrammeR)
-grViz(&quot;
-digraph flowchart{
-rankdir=LR; 
-
-node[fontname=&#39;Arial Black&#39;, fillcolor=&#39;#9DD6DF&#39;, color=&#39;#FF0063&#39;, style=filled, shape=oval]
-black;card1;card2;card3;
-
-edge[fontname=arial, color=blue, style=filled, arrowhead=vee]
-
-black -&gt; card1 [label=&#39;2/3&#39;, fontsize=8]
-black -&gt; card3 [label=&#39;1/3&#39;, fontsize=8]
-black -&gt; card2 [label=&#39;0&#39;, fontsize=8]
-card1 -&gt; &#39;black-at-back&#39; [label=&#39;1&#39;, fontsize=8]
-
-card3 -&gt; &#39;white-at-back&#39; [label=&#39;1&#39;, fontsize=8]
-
-#subgraph{rank=same; D;B}
-#subgraph{rank=same; C}
-
-}&quot;,
-height = 400)</code></pre>
 <div id="htmlwidget-4" style="width:672px;height:400px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-4">{"x":{"diagram":"\ndigraph flowchart{\nrankdir=LR; \n\nnode[fontname=\"Arial Black\", fillcolor=\"#9DD6DF\", color=\"#FF0063\", style=filled, shape=oval]\nblack;card1;card2;card3;\n\nedge[fontname=arial, color=blue, style=filled, arrowhead=vee]\n\nblack -> card1 [label=\"2/3\", fontsize=8]\nblack -> card3 [label=\"1/3\", fontsize=8]\nblack -> card2 [label=\"0\", fontsize=8]\ncard1 -> \"black-at-back\" [label=\"1\", fontsize=8]\n\ncard3 -> \"white-at-back\" [label=\"1\", fontsize=8]\n\n#subgraph{rank=same; D;B}\n#subgraph{rank=same; C}\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
