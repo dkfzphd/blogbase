@@ -118,7 +118,9 @@ height = 400)
 有三张纸牌：
 
 纸牌1： 2面都是黑色          card1: black-black 
+
 纸牌2： 2面都是白色          card2: white-white
+
 纸牌3： 1面是白色，1面是黑色 card3: black-white 
 
 问题：当你随机抽取一张牌看到的是黑色，请问背面是白色的概率。答案是1/3.
