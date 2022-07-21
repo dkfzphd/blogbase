@@ -57,7 +57,7 @@ tags:
 通过不断的自我问话和学习，具备了一定系统性思考的能力。也掌握了一定的逻辑思考能力。这些能力都是从统计上获得的。这些离不开 **Will Kurt**《Bayesian Statistics the Fun Way》，
 **Richard McElreath**的书《Statistical Rethinking》，离不开**Alexandre ANDORRA**的[Podcast](https://learnbayesstats.com/)（他的法国口音很明显，有特色，英语语音还清晰，他的节目里有太多大家和不同于聒噪世界的声音。他本身是PyMC的成员）。
 
-对记录和可重复性研究的实现方法离不开**谢益辉**的`Rmarkdown`和**Hadley Wickham**`ggplot2`包。
+对记录和可重复性研究的实现方法离不开**谢益辉**的`Rmarkdown`和**Hadley Wickham**著名的`ggplot2`包。
 
 未来的我：
 - 掌握贝叶斯概率和统计推断
