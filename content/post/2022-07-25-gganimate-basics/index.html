@@ -1,0 +1,44 @@
+---
+title: gganimate-basics
+author: Guo Te
+date: '2022-07-25'
+slug: gganimate-basics
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+
+
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+## ✔ ggplot2 3.3.6     ✔ purrr   0.3.4
+## ✔ tibble  3.1.7     ✔ dplyr   1.0.9
+## ✔ tidyr   1.2.0     ✔ stringr 1.4.0
+## ✔ readr   2.1.2     ✔ forcats 0.5.1
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(gganimate)
+library(ggthemes)
+
+theme_set(theme_economist_white())
+
+x &lt;- seq(0,15,by=0.1)
+y &lt;- sin(x)+0.8*x+0.1*x^2
+df1 &lt;- tibble(x,y)
+plot1 &lt;- ggplot(df1,aes(x,y))+
+  geom_line(size=1,color=&#39;#e63946&#39;)+
+  geom_line(aes(x,1.9*x),size=1,color=&#39;black&#39;)+
+  geom_point(color=&#39;#03045e&#39;, alpha=0.5, size=3)+
+  labs(x=&quot;Time&quot;,
+       y=&quot;Ability&quot;)
+plot1</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>animate1 &lt;- plot1 +
+              transition_reveal(x)
+animate1</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.gif" /><!-- --></p>
+<pre class="r"><code># animate(animate1, height = 800, width =800)
+# anim_save(&quot;animate1.gif&quot;, animate1)</code></pre>
