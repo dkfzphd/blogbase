@@ -1,15 +1,13 @@
 ---
-title: gganimate-basics
-author: Guo Te
+title: "gganimate-basics"
+author: "Guo Te"
 date: '2022-07-25'
 slug: gganimate-basics
-categories:
-  - R
-tags:
-  - R Markdown
+categories: R
+tags: R Markdown
 ---
 
-```{r, warning=FALSE}
+```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(gganimate)
 library(ggthemes)
