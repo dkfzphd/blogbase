@@ -25,13 +25,13 @@ Ref:
 
 ## Genreal Priciple
 
-1. Express_efficiently and without toxicity
+1. Express efficiently and without toxicity
 
 2. Sufficient photostability (stable ~ duration in the experiment)
 
 3. Fluoresecent proteins(FP) is to be expressed as a fusion protein, FP should not oligomerize(形成低聚物)
 
-4. FP should be insensitive to enviromental effects.
+4. FP should be insensitive to environmental effects.
 
 5. FP once being used in multiple-plex experiments should have minimal crosstalk in  excitation and emission.
 
