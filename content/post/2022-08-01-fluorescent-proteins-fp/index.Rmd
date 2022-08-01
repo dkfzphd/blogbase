@@ -52,7 +52,7 @@ edge[fontname=arial, color=blue, style=filled, arrowhead=vee]
 
 ## Brightness and Expression
 - FP vendors is skeptical (claimed brightness may not be real)
-- Oxygen presence
+- Oxygen presence is needed for  FPs expressed in living organisms
 - Temperature 25 ^0^C or 37 ^0^C (some FPs Temp influenced the expression) 
 - Chaperones(配体) (In bacteria and mammalian cells may differ )
 
