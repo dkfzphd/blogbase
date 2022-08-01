@@ -47,7 +47,7 @@ edge[fontname=arial, color=blue, style=filled, arrowhead=vee]
 
 5. FP once being used in multiple-plex experiments should have minimal crosstalk in  excitation and emission.
 
-6.FRET or selective optical labeling using photocon-vertible FPs.
+6. FRET or selective optical labeling using photocon-vertible FPs.
 
 
 ## Brightness and Expression
