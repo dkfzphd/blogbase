@@ -19,7 +19,7 @@ Ref: [A guide to choosing fluorescent proteins
 
 ## Basic Process
 
-`FP_best_for_genernal_use` -> `Genreal_Priciple` -> `Trial_and_Error`
+**FP_best_for_genernal_use** -> **Genreal_Priciple**-> **Trial_and_Error**
 
 ## Genreal Priciple
 
