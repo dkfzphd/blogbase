@@ -18,22 +18,8 @@ Ref: [A guide to choosing fluorescent proteins
 
 
 ## Basic Process
-```{r, echo=FALSE, message=FALSE}
-library(DiagrammeR)
-grViz("
-digraph{
-rankdir=LR;
-node[fontname='Calibri', fillcolor='#9DD6DF', color='#FF0063', style=filled, shape=rect]
 
-'FP_best_for_genernal_use'
-'Genreal_Priciple'
-'Trial_and_Error'
-
-edge[fontname=arial, color=blue, style=filled, arrowhead=vee]
-'FP_best_for_genernal_use' -> 'Genreal_Priciple' -> 'Trial_and_Error'
-
-}")
-```
+`FP_best_for_genernal_use` -> `Genreal_Priciple` -> `Trial_and_Error`
 
 ## Genreal Priciple
 
