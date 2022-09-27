@@ -68,3 +68,18 @@ pdftools::pdf_convert(
 )</code></pre>
 <pre><code>## Converting page 1 to Net_migration_dark.png... done!</code></pre>
 <pre><code>## [1] &quot;Net_migration_dark.png&quot;</code></pre>
+<pre class="r"><code>library(grid)
+p
+grid.lines(
+  x = c(0, 1),
+  y = 1,
+  gp = gpar(col = &quot;#D13223&quot;, lwd = 2) # &quot;#D13223&quot;
+)
+grid.rect(
+  x = 0,
+  y = 1,
+  width = 0.2, # TODO 10 % of line / image width
+  height = 0.05,  # TODO ~2 % of line / image height
+  gp = gpar(fill = &quot;#D13223&quot;, col = NA)
+)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
