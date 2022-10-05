@@ -49,7 +49,7 @@ library(tidyverse)
 
 ## Example
 ### APA theme
-```{r}
+```{r warning=FALSE,message=FALSE}
 pic <- ggplot(ToothGrowth) +
  aes(x = factor(dose), y = len, fill = supp, colour = supp) +
  geom_point(shape=ToothGrowth$supp,size = 1.5,position = position_dodge(0.2)) +
@@ -62,7 +62,7 @@ pic_apa
 ```
 
 ## my own theme
-```{r}
+```{r warning=FALSE,message=FALSE}
 pic_own <- pic+theme(
     axis.title = element_text(size = 16, family = "Roboto"),
     axis.text.x = element_text(size = 12, family = "Roboto"),
