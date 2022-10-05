@@ -1,0 +1,59 @@
+---
+title: APA theme- ggplot2
+author: Guo Te
+date: '2022-10-05'
+slug: apa-theme
+categories:
+  - R
+tags:
+  - Rmarkdown
+---
+
+
+
+<p><a href="https://ggplot2tor.com/tutorials/apa_theme_rprofile">Christian</a>
+<a href="https://christianburkhart.de/" class="uri">https://christianburkhart.de/</a></p>
+<p>How to set your APA 7 theme in RStudio
+Many researchers in the social sciences often need to create APA-style figures. Fortunately, there is a little trick that makes it easier to automatically set up an APA theme in ggplot2.</p>
+<p><a href="https://ggplot2tor.com/tutorials/apa_theme_rprofile" class="uri">https://ggplot2tor.com/tutorials/apa_theme_rprofile</a></p>
+<div id="code-part" class="section level2">
+<h2>Code part</h2>
+<pre class="r"><code>library(tidyverse)
+# Set theme
+  apa_theme &lt;- theme(
+    plot.margin = unit(c(1, 1, 1, 1), &quot;cm&quot;),
+    plot.background = element_rect(fill = &quot;white&quot;, color = NA),
+    plot.title = element_text(size = 22, face = &quot;bold&quot;,
+                              hjust = 0.5,
+                              margin = margin(b = 15)),
+    axis.line = element_line(color = &quot;black&quot;, size = .5),
+    axis.title = element_text(size = 18, color = &quot;black&quot;,
+                              face = &quot;bold&quot;),
+    axis.text = element_text(size = 15, color = &quot;black&quot;),
+    axis.text.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    axis.ticks = element_line(size = .5),
+    panel.grid = element_blank(),
+    legend.position = c(0.20, 0.8),
+    legend.background = element_rect(color = &quot;black&quot;),
+    legend.text = element_text(size = 15),
+    legend.margin = margin(t = 5, l = 5, r = 5, b = 5),
+    legend.key = element_rect(color = NA, fill = NA)
+  )
+  
+  theme_set(theme_minimal(base_size = 18) +
+            apa_theme)</code></pre>
+</div>
+<div id="example" class="section level2">
+<h2>Example</h2>
+<pre class="r"><code>pic &lt;- ggplot(ToothGrowth) +
+ aes(x = factor(dose), y = len, fill = supp, colour = supp) +
+ geom_point(shape=ToothGrowth$supp,size = 1.5,position = position_dodge(0.2)) +
+ theme_bw()
+pic</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>pic_apa &lt;- pic+theme_set(theme_minimal(base_size = 18) +
+            apa_theme)
+pic_apa</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+</div>
