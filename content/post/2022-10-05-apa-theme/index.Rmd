@@ -52,8 +52,7 @@ library(tidyverse)
 ```{r warning=FALSE,message=FALSE}
 pic <- ggplot(ToothGrowth) +
  aes(x = factor(dose), y = len, fill = supp, colour = supp) +
- geom_point(shape=ToothGrowth$supp,size = 1.5,position = position_dodge(0.2)) +
- theme_bw()
+ geom_point(shape=ToothGrowth$supp,size = 1.5,position = position_dodge(0.2)) 
 pic
 
 pic_apa <- pic+theme_set(theme_minimal(base_size = 18) +
@@ -72,12 +71,39 @@ pic_own <- pic+theme(
     axis.line.x = element_line(color = "gray8"),
     axis.line.y = element_line(color = "gray8"),
     panel.background = element_rect(fill = "white",color = "white"),
-    plot.background = element_rect(fill = "white",color = "white"),
+    panel.border = element_rect(fill = NA, size=1),
+    plot.background = element_rect(fill = "white",color = "gray45"),
     legend.position = c(0.1, 0.8),
     legend.background = element_rect(fill = NA),
     legend.key = element_rect(fill = NA),
     plot.margin = unit(c(.5, .5, .5, .5), "cm")
   )
 pic_own  
+```
+
+# APA theme version 2 ref: https://bookdown.org/content/2015/figures.html
+```{r warning=FALSE,message=FALSE}
+apatheme=theme_bw()+
+  theme(panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.border=element_blank(),
+        axis.line=element_line(),
+        text=element_text(family='Arial'),
+        legend.title=element_blank(),
+        axis.text.y=element_text(size = 12),
+        axis.text.x=element_text(size = 12),
+        plot.tag = element_text(face = "bold"))
+
+# test apatheme version 2
+pic + labs(tag="A")+theme_bw()+
+  theme(panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.border=element_blank(),
+        axis.line=element_line(),
+        text=element_text(family='Arial'),
+        legend.title=element_blank(),
+        axis.text.y=element_text(size = 12),
+        axis.text.x=element_text(size = 12),
+        plot.tag = element_text(face = "bold"))
 ```
 

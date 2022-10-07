@@ -50,8 +50,7 @@ Many researchers in the social sciences often need to create APA-style figures. 
 <h3>APA theme</h3>
 <pre class="r"><code>pic &lt;- ggplot(ToothGrowth) +
  aes(x = factor(dose), y = len, fill = supp, colour = supp) +
- geom_point(shape=ToothGrowth$supp,size = 1.5,position = position_dodge(0.2)) +
- theme_bw()
+ geom_point(shape=ToothGrowth$supp,size = 1.5,position = position_dodge(0.2)) 
 pic</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <pre class="r"><code>pic_apa &lt;- pic+theme_set(theme_minimal(base_size = 18) +
@@ -71,7 +70,8 @@ pic_apa</code></pre>
     axis.line.x = element_line(color = &quot;gray8&quot;),
     axis.line.y = element_line(color = &quot;gray8&quot;),
     panel.background = element_rect(fill = &quot;white&quot;,color = &quot;white&quot;),
-    plot.background = element_rect(fill = &quot;white&quot;,color = &quot;white&quot;),
+    panel.border = element_rect(fill = NA, size=1),
+    plot.background = element_rect(fill = &quot;white&quot;,color = &quot;gray45&quot;),
     legend.position = c(0.1, 0.8),
     legend.background = element_rect(fill = NA),
     legend.key = element_rect(fill = NA),
@@ -79,4 +79,30 @@ pic_apa</code></pre>
   )
 pic_own  </code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="apa-theme-version-2-ref-httpsbookdown.orgcontent2015figures.html" class="section level1">
+<h1>APA theme version 2 ref: <a href="https://bookdown.org/content/2015/figures.html" class="uri">https://bookdown.org/content/2015/figures.html</a></h1>
+<pre class="r"><code>apatheme=theme_bw()+
+  theme(panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.border=element_blank(),
+        axis.line=element_line(),
+        text=element_text(family=&#39;Arial&#39;),
+        legend.title=element_blank(),
+        axis.text.y=element_text(size = 12),
+        axis.text.x=element_text(size = 12),
+        plot.tag = element_text(face = &quot;bold&quot;))
+
+# test apatheme version 2
+pic + labs(tag=&quot;A&quot;)+theme_bw()+
+  theme(panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        panel.border=element_blank(),
+        axis.line=element_line(),
+        text=element_text(family=&#39;Arial&#39;),
+        legend.title=element_blank(),
+        axis.text.y=element_text(size = 12),
+        axis.text.x=element_text(size = 12),
+        plot.tag = element_text(face = &quot;bold&quot;))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
