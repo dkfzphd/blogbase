@@ -10,6 +10,9 @@ tags:
 ---
 
 ## Plot with <span style = 'color: red;'>**title color **</span> 
+
+
+
 ```{r message=FALSE,warning=FALSE}
 library(ggplot2)
 library(ggtext)
@@ -48,11 +51,25 @@ ggplot(ToothGrowth, aes(x = dose, y = len)) +
     y = NULL,
     title = "<span style = 'color: blue;'>**VC**</span> and 
                 <span style = 'color: red;'>**OJ**</span> <br> 
-                tooth growth"
+                tooth growth",
+    caption = "Some rmarkdown bold **bold words**<br>(using made-up data)"
   ) +
   theme(
     plot.title = element_markdown(),
-    legend.position = "top"
+    legend.position = "top",
+    plot.caption = element_markdown()
   )
 ```
+
+## html
+
+ <span class="emphasized" style = 'color: red;'>emphasized word with red color</span> 
+ <br>
+ <span class="bold" style = 'color: red;'>word</span> 
+ <br>
+ <p>The meeting will begin at 5:00 PM on <s>Saturday</s> now on Sunday.</p>
+ <br>
+ <p>This is some normal paragraph text, <strong>and this is some important text.</strong></p>
+
+
 

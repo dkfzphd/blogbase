@@ -49,11 +49,27 @@ ggplot(ToothGrowth, aes(x = dose, y = len)) +
     y = NULL,
     title = &quot;&lt;span style = &#39;color: blue;&#39;&gt;**VC**&lt;/span&gt; and 
                 &lt;span style = &#39;color: red;&#39;&gt;**OJ**&lt;/span&gt; &lt;br&gt; 
-                tooth growth&quot;
+                tooth growth&quot;,
+    caption = &quot;Some rmarkdown bold **bold words**&lt;br&gt;(using made-up data)&quot;
   ) +
   theme(
     plot.title = element_markdown(),
-    legend.position = &quot;top&quot;
+    legend.position = &quot;top&quot;,
+    plot.caption = element_markdown()
   )</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="html" class="section level2">
+<h2>html</h2>
+<span class="emphasized" style="color: red;">emphasized word with red color</span>
+<br>
+<span class="bold" style="color: red;">word</span>
+<br>
+<p>
+The meeting will begin at 5:00 PM on <s>Saturday</s> now on Sunday.
+</p>
+<br>
+<p>
+This is some normal paragraph text, <strong>and this is some important text.</strong>
+</p>
 </div>
