@@ -1,0 +1,58 @@
+---
+title: examples-ggplot2
+author: Guo Te
+date: '2022-10-08'
+slug: examples-ggplot2
+categories:
+  - R
+tags:
+  - R Markdown
+---
+
+## Plot with <span style = 'color: red;'>**title color **</span> 
+```{r message=FALSE,warning=FALSE}
+library(ggplot2)
+library(ggtext)
+theme_set(theme_bw())
+data("ToothGrowth")
+ToothGrowth$dose <- as.factor(ToothGrowth$dose)
+
+# position = position_dodge(.75) in order to align point and boxplot
+ggplot(ToothGrowth, aes(x = dose, y = len)) +
+  geom_boxplot(aes(fill = supp)) +
+  scale_fill_manual(values = c("gray99", "gray99")) +
+  geom_point(aes(color = supp), position = position_dodge(.75), alpha = .8) +
+  scale_color_manual(values = c("red", "blue")) +
+  labs(
+    x = NULL,
+    y = NULL,
+    title = "<span style = 'color: red;'>**OJ**</span> and 
+                <span style = 'color: blue;'>**VC**</span> <br> 
+                tooth growth"
+  ) +
+  theme(
+    plot.title = element_markdown(),
+    legend.position = "top"
+  )
+```
+```{r}
+#  relevel ToothGrowth$supp so VC will be plot first
+ToothGrowth$supp <- relevel(ToothGrowth$supp, ref = "VC")
+ggplot(ToothGrowth, aes(x = dose, y = len)) +
+  geom_boxplot(aes(fill = supp)) +
+  scale_fill_manual(values = c("gray99", "gray99")) +
+  geom_point(aes(color = supp), position = position_dodge(.75), alpha = .8) +
+  scale_color_manual(values = c("blue", "red")) +
+  labs(
+    x = NULL,
+    y = NULL,
+    title = "<span style = 'color: blue;'>**VC**</span> and 
+                <span style = 'color: red;'>**OJ**</span> <br> 
+                tooth growth"
+  ) +
+  theme(
+    plot.title = element_markdown(),
+    legend.position = "top"
+  )
+```
+
