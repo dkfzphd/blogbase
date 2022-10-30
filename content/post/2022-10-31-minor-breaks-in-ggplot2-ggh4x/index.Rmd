@@ -70,5 +70,5 @@ ggplot(df1, aes(x1, y1)) +
   theme_bw(28) +
   theme(axis.ticks.length.x = unit(0.5, "cm")) + # set ticks length
   theme(ggh4x.axis.ticks.length.minor = rel(.5))+ # set minor / major ticks length ratio
-  theme(panel.grid = element_line(color = "blue4"))
+  theme(panel.grid = element_line(color = "blue",size=.3))
 ```
