@@ -25,3 +25,9 @@ editor_options:
   chunk_output_type: console  
 ---
 ```
+### side by side plots
+```{r out.width=c('50%', '50%'), fig.show='hold'}
+set.seed(81)
+boxplot(rnorm(10))
+plot(rnorm(10))
+```
