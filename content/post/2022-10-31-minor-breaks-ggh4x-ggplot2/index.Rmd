@@ -1,13 +1,15 @@
 ---
-title: minor_breaks-in-ggplot2-ggh4x
+title: minor-breaks-ggh4x-ggplot2
 author: Guo Te
 date: '2022-10-31'
-slug: minor-breaks-in-ggplot2-ggh4x
+slug: minor-breaks-ggh4x-ggplot2
 categories:
   - R
 tags:
   - R Markdown
+  - Rmarkdown
 ---
+
 
 ```{r message=FALSE, warning=FALSE}
 library(tidyverse)
